@@ -24,12 +24,13 @@ export default function RouteWrapper({
         />
     )
 }
-
-RouteWrapper.PropTypes={
-    isPrivate:PropTypes.bool,
-    component:PropTypes.oneOfType([PropTypes.element,PropTypes.func]).isRequired,
-};
-
-RouteWrapper.defaultProps={
+RouteWrapper.propTypes = {
+    isPrivate: PropTypes.bool,
+    component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+      .isRequired,
+  };
+  
+  RouteWrapper.defaultProps = {
     isPrivate: false,
-}
+  };
+  
