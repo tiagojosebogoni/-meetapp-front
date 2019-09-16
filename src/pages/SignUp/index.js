@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
+import * as Yup from 'yup'
 import logo from '../../assets/logo.svg';
 
-import * as Yup from 'yup'
 
 export default function SignUp() {
   const schema = Yup.object().shape({
-    name:Yup.string('Insira seu nome completo').required('Nome é obrigatório'),
-    email:Yup.string().email('Insira um email válido').required('Email é obrigatório'),
-    password: Yup.string().required('Senha é obrigatória')
-  })
+    name: Yup.string('Insira seu nome completo').required('Nome é obrigatório'),
+    email: Yup.string()
+      .email('Insira um email válido')
+      .required('Email é obrigatório'),
+    password: Yup.string().required('Senha é obrigatória'),
+  });
 
   function handleSubmit() {}
 
