@@ -58,19 +58,20 @@ export const Profile = styled.div`
   }
 
   button {
-      background: #f04c69;
-      margin-top: 10px;
-      border: 0;
-      color: #fff;
-      font-weight: bold;
-      height: 44px;
-      width:55px;
-      padding: 0;
-      border-radius: 4px;
-      font-size: 16px;
-      transition: background 0.2s;
+    background: #f04c69;
+    margin-top: 10px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    height: 44px;
+    width: 55px;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.2s;
 
-      &:hover {
-        background: ${darken(0.03, '#f04c69')};
-      }
+    &:hover {
+      background: ${darken(0.03, '#f04c69')};
+    }
+  }
 `;
