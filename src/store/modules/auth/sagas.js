@@ -8,16 +8,15 @@ export function* signIn({ payload }) {
   try {
     const { email, password } = payload;
 
-    const response = yield call(api.post, 'sessions', { email, password });
+    const response = yield call(api.post, '/sessions', { email, password });
 
     const { token, user } = response.data;
-
+    api.head = 'Access-Control-Allow-Origin';
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
     history.push('/dashboard');
   } catch (err) {
-    console.log(err);
     yield put(signFailure());
   }
 }
