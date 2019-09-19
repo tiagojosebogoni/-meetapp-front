@@ -1,10 +1,13 @@
 import React from 'react';
 import { MdAddCircle, MdKeyboardArrowRight } from 'react-icons/md';
 import { Container, Header } from './styles';
+import api from '../../services/api';
 
 // import { Container } from './styles';
 
 export default function Dashboard() {
+  api.get('organizing');
+
   function handleClick() {}
 
   return (

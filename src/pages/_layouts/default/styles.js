@@ -30,10 +30,9 @@ export const Content = styled.div`
     }
 
     span {
-      color: #fff
+      color: #fff;
       align-self: flex-start;
       margin: 0 10px;
-
     }
 
     button {

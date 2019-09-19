@@ -1,19 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const Wrapper = styled.div`
-  height: 100%;
-  background: linear-gradient(#22202c, #402845);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Content = styled.div`
-  width: 100%;
-  max-width: 315px;
-  text-align: center;
-
+export const Container = styled.div`
   form {
     display: flex;
     flex-direction: column;
@@ -24,10 +12,12 @@ export const Content = styled.div`
       border: 0;
       border-radius: 4px;
       height: 44px;
+      width: 400px;
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
-      &::placeholder {
+
+      &:placeholder {
         color: rgba(255, 255, 255, 0.7);
       }
     }
@@ -39,30 +29,36 @@ export const Content = styled.div`
       font-weight: bold;
     }
 
+    hr {
+      border: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 10px 0 20px;
+    }
+
     button {
       margin: 5px 0 0;
       height: 44px;
-      background: #3b9eff;
-      font-weight: bold;
+      background: #fb6f91;
       color: #fff;
       border: 0;
       border-radius: 4px;
-      font-size: 16px;
       transition: background 0.2s;
 
-      &::hover {
-        background: ${darken(0.9, '#3b9eff')};
-      }
-    }
+      div {
+        display: flex;
+        align-self: center;
+        margin-right: 10px;
 
-    a {
-      color: #fff;
-      margin-top: 15px;
-      font-size: 16px;
-      opacity: 0.8;
+        span {
+          display: flex;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
 
       &:hover {
-        opacity: 1;
+        background: ${darken(0.1, '#fb6f91')};
       }
     }
   }

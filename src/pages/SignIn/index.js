@@ -29,7 +29,7 @@ export default function SignIn() {
         <Input name="email" type="text" placeholder="Seu Email" />
         <Input name="password" type="password" placeholder="Sua Senha" />
 
-        <button type="submit">{loading ? 'Carregando': 'Entrar'}</button>
+        <button type="submit">{loading ? 'Carregando' : 'Entrar'}</button>
 
         <Link to="/register">Criar Conta</Link>
       </Form>

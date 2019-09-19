@@ -28,6 +28,7 @@ export const Content = styled.div`
     font-weight: bold;
     color: #7159c1;
   }
+
   aside {
     display: flex;
     align-items: center;
