@@ -12,7 +12,7 @@ export const Container = styled.div`
       border: 0;
       border-radius: 4px;
       height: 44px;
-      width: 400px;
+      width: 900px;
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
@@ -36,29 +36,41 @@ export const Container = styled.div`
       margin: 10px 0 20px;
     }
 
-    button {
-      margin: 5px 0 0;
-      height: 44px;
-      background: #fb6f91;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      transition: background 0.2s;
+    div {
+      display: flex;
+      justify-content: flex-end;
 
-      div {
-        display: flex;
-        align-self: center;
-        margin-right: 10px;
+      button {
+        margin: 5px 0 0;
+        height: 40px;
+        background: #fb6f91;
+        color: #fff;
+        border: 0;
+        align-content: center;
+        border-radius: 4px;
+        transition: background 0.2s;
 
-        span {
+        > div {
           display: flex;
-          color: #fff;
-          font-weight: bold;
-        }
-      }
+          align-self: center;
+          margin-right: 10px;
 
-      &:hover {
-        background: ${darken(0.1, '#fb6f91')};
+          svg {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+
+          span {
+            margin-right: 10px;
+            display: flex;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+
+        &:hover {
+          background: ${darken(0.1, '#fb6f91')};
+        }
       }
     }
   }

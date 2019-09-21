@@ -28,13 +28,14 @@ export default function Profile() {
           type="password"
           placeholder="Confirmação de senha"
         />
-
-        <button type="button">
-          <div>
-            <MdAddCircleOutline size={16} />
-            <span>Salvar perfil</span>
-          </div>
-        </button>
+        <div>
+          <button type="button">
+            <div>
+              <MdAddCircleOutline size={16} />
+              <span>Salvar perfil</span>
+            </div>
+          </button>
+        </div>
       </Form>
     </Container>
   );

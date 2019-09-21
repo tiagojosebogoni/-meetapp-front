@@ -19,7 +19,8 @@ export const Content = styled.div`
     flex-direction: column;
     margin-top: 30px;
 
-    input {
+    input,
+    textarea {
       background: rgba(0, 0, 0, 0.1);
       border: 0;
       border-radius: 4px;

@@ -1,14 +1,28 @@
-import React from 'react';
-import { MdAddCircle, MdKeyboardArrowRight } from 'react-icons/md';
-import { Container, Header } from './styles';
-import api from '../../services/api';
+import React, { useState, useEffect } from 'react';
 
-// import { Container } from './styles';
+import { MdAddCircle, MdKeyboardArrowRight } from 'react-icons/md';
+import { Container, Header, MeetupsItems } from './styles';
+import api from '../../services/api';
+import history from '../../services/history';
 
 export default function Dashboard() {
-  api.get('organizing');
+  const [meetups, setMeetups] = useState([]);
 
-  function handleClick() {}
+  function handleClick() {
+    return history.push('newEdit ');
+  }
+
+  useEffect(() => {
+    async function loadMeetups() {
+      const response = await api.get('organizing');
+
+      const { data } = response;
+
+      setMeetups(data);
+    }
+
+    loadMeetups();
+  }, [meetups]);
 
   return (
     <Container>
@@ -16,34 +30,21 @@ export default function Dashboard() {
         <strong>Meus Meetups</strong>
         <button type="button" onClick={handleClick}>
           <div>
-            <MdAddCircle size={26} color="#fff" />
+            <MdAddCircle size={18} color="#fff" />
             <span>Novo meetup</span>
           </div>
         </button>
       </Header>
       <ul>
-        <li>
-          <strong>Meetup</strong>
-          <span>Em aberto</span>
-          <MdKeyboardArrowRight size={20} />
-        </li>
-        <li>
-          <strong>Meetup</strong>
-          <span>
-            Em aberto
-            <MdKeyboardArrowRight size={20} />
-          </span>
-        </li>
-        <li>
-          <strong>Meetup</strong>
-          <span>Em aberto</span>
-          <MdKeyboardArrowRight size={20} />
-        </li>
-        <li>
-          <strong>Meetup</strong>
-          <span>Em aberto</span>
-          <MdKeyboardArrowRight size={20} />
-        </li>
+        {meetups.map(meetup => (
+          <MeetupsItems key={meetup.id}>
+            <strong>{meetup.title}</strong>
+            <div>
+              <span>{meetup.formattedDate}</span>
+              <MdKeyboardArrowRight size={20} />
+            </div>
+          </MeetupsItems>
+        ))}
       </ul>
     </Container>
   );

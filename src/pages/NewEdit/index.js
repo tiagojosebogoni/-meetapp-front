@@ -1,14 +1,27 @@
 import React from 'react';
-import { Form, Input } from '@rocketseat/unform';
-// import { Container } from './styles';
+import { MdAddCircleOutline } from 'react-icons/md';
+import { Form, Input, FileInput } from '@rocketseat/unform';
+import { Container } from './styles';
 
 export default function NewEdit() {
   return (
-    <Form>
-      <Input name="title" />
-      <Input name="description" />
-      <Input name="date" />
-      <Input name="location" />
-    </Form>
+    <Container>
+      <Form>
+        <FileInput name="attach" onStartProgress="" />
+        <Input name="title" placeholder="Título do Meetup" />
+        <Input multiline name="description" placeholder="Descrição completa" />
+        <Input name="date" placeholder="Data do meetup" />
+        <Input name="location" placeholder="Localização" />
+
+        <div>
+          <button type="button">
+            <div>
+              <MdAddCircleOutline size={16} />
+              <span>Salvar perfil</span>
+            </div>
+          </button>
+        </div>
+      </Form>
+    </Container>
   );
 }

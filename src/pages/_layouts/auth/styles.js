@@ -19,7 +19,8 @@ export const Content = styled.div`
     flex-direction: column;
     margin-top: 30px;
 
-    input {
+    input,
+    textarea {
       background: rgba(0, 0, 0, 0.1);
       border: 0;
       border-radius: 4px;
@@ -27,7 +28,8 @@ export const Content = styled.div`
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
-      &::placeholder {
+
+      &:placeholder {
         color: rgba(255, 255, 255, 0.7);
       }
     }
@@ -50,7 +52,7 @@ export const Content = styled.div`
       font-size: 16px;
       transition: background 0.2s;
 
-      &::hover {
+      &:hover {
         background: ${darken(0.9, '#3b9eff')};
       }
     }

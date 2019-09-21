@@ -2,36 +2,24 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
-  background: #22288c;
+  background: rgba(0, 0, 0, 0.2);
   padding: 0 30px;
   width: 100%;
 `;
 
 export const Content = styled.div`
+  display: flex;
   height: 64px;
   max-width: 900px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 
-  nav {
-    display: flex;
-    align-items: center;
-  }
   img {
+    height: 35px;
     margin-right: 20px;
     padding-right: 20px;
     border-right: 1px solid #eee;
-  }
-  a {
-    font-weight: bold;
-    color: #7159c1;
-  }
-
-  aside {
-    display: flex;
-    align-items: center;
   }
 `;
 
@@ -44,12 +32,13 @@ export const Profile = styled.div`
 
   div {
     text-align: right;
-    margin-right: 10px;
+    margin-right: 20px;
 
     strong {
       display: block;
-      color: #333;
+      color: #999;
     }
+
     a {
       display: block;
       margin-top: 2px;
@@ -60,11 +49,10 @@ export const Profile = styled.div`
 
   button {
     background: #f04c69;
-    margin-top: 10px;
     border: 0;
     color: #fff;
     font-weight: bold;
-    height: 44px;
+    height: 35px;
     width: 55px;
     padding: 0;
     border-radius: 4px;
